@@ -25,13 +25,6 @@
 			"rul.templatemod.TemplateModDataGenerator"
 		]
 	},
-	"mixins": [
-		"templatemod.mixins.json",
-		{
-			"config": "templatemod.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.17.2",
 		"minecraft": "~1.21.4",
