@@ -1,0 +1,23 @@
+package rul.templatemod;
+
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.minecraft.client.MinecraftClient;
+import org.lwjgl.glfw.GLFW;
+
+public class NigKeyHandler {
+    private static boolean wasPressed = false;
+
+    public static void register() {
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            if (client.currentScreen != null) return;
+
+            long window = client.getWindow().getHandle();
+            boolean isRightShiftDown = GLFW.glfwGetKey(window, GLFW.GLFW_KEY_RIGHT_SHIFT) == GLFW.GLFW_PRESS;
+
+            if (isRightShiftDown && !wasPressed) {
+                MinecraftClient.getInstance().setScreen(new NigScreen());
+            }
+            wasPressed = isRightShiftDown;
+        });
+    }
+}
