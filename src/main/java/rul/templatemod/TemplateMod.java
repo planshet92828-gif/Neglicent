@@ -18,9 +18,9 @@ public class TemplateMod implements ModInitializer, ClientModInitializer {
 		ModEntities.registerModEntities();
 	}
 
-	// Добавили клиентскую часть
+	// Клиентская часть (пока пустая, чтобы мод собрался)
 	@Override
 	public void onInitializeClient() {
-		NigKeyHandler.register(); // Тут запускается наш обработчик кнопки
+		
 	}
 }
