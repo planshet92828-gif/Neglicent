@@ -19,7 +19,7 @@
 			"rul.templatemod.TemplateMod"
 		],
 		"client": [
-			"rul.templatemod.TemplateModClient"
+			"rul.templatemod.TemplateMod"
 		],
 		"fabric-datagen": [
 			"rul.templatemod.TemplateModDataGenerator"
